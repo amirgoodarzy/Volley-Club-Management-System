@@ -31,16 +31,16 @@ A dynamic web application designed for a professional volleyball club. This syst
 
 ### 1. Staff Login Page
 *(Secure entry point for administrators)*
-![Staff Login](screenshots/staff login.png)
+![Staff Login](project%20web/screenshots/staff%20login.png)
 
 ### 2. Admin Dashboard
 *(Manage Roster, Matches, and Shop from one place)*
-![Dashboard](screenshots/Dashboard.png)
+![Dashboard](project%20web/screenshots/Dashboard.png)
 
 ### 3. Fan Ticket Center
 *(Countdown timer and ticket purchasing system)*
-![Ticket Center](screenshots/ticket.png)
+![Ticket Center](project%20web/screenshots/ticket.png)
 
-### 4. PURCHASE users
-*(Fans can browse and buy club gear)*
-![Shop Page](screenshots/PURCHASE.png)
+### 4. Merchandise Shop & Purchase History
+*(Fans can browse club gear and see their orders)*
+![Shop Page](project%20web/screenshots/PURCHASE.png)
