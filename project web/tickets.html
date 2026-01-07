@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Tickets - Volley Club</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tickets.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logos/logo.png" alt="Team Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="roster.html">The Team</a></li>
+                <li><a href="matches.html">Matches</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="tickets.html" class="active">Tickets</a></li>
+                <li class="auth-divider">|</li> <li><a href="login.html" class="nav-link-login"><i class="fas fa-user"></i> Login</a></li>
+                <li><a href="register.html" class="btn-join">Join Us</a></li>
+                <li>
+                    <div class="cart-icon-container" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </div>
+                </li>
+            </ul>
+            <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <header class="ticket-header">
+        <div class="container">
+            <h2>NEXT HOME MATCH</h2>
+            <div class="match-title">penzegyor vs TRENTINO</div>
+            <div class="location-tag"><i class="fas fa-map-marker-alt"></i> PalaRescifina - Messina</div>
+            
+            <div class="countdown-container">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <span class="label">Days</span>
+                </div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <span class="label">Hours</span>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <span class="label">Minutes</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="ticket-section">
+        <div class="container ticket-layout">
+            
+            <div class="arena-visual">
+                <h3 class="gold-text">SELECT SEAT</h3>
+                <div class="arena-map">
+                    <div class="court-area">
+                        <div class="net-line"></div>
+                    </div>
+                    
+                    <div class="seat-section section-top class-b">B</div>
+                    <div class="seat-section section-bottom class-b">B</div>
+                    <div class="seat-section section-left class-a">A</div>
+                    <div class="seat-section section-right class-a">A</div>
+                    <div class="seat-section corner-tl class-c">C</div>
+                    <div class="seat-section corner-tr class-c">C</div>
+                    <div class="seat-section corner-bl class-c">C</div>
+                    <div class="seat-section corner-br class-c">C</div>
+                </div>
+            </div>
+
+            <div class="price-list">
+                <h3>TICKET PRICES</h3>
+                
+                <div class="ticket-row">
+                    <div class="ticket-icon icon-gold"><i class="fas fa-chair"></i></div>
+                    <div class="ticket-info">
+                        <h4>VIP Gold - Class A</h4>
+                        <p>Best view, court side</p>
+                    </div>
+                    <div class="price-box">
+                        <span class="price">30€</span>
+                        <button class="btn-buy" onclick="addToCart('VIP Gold Ticket', 'Ticket', 30.00)">BUY</button>
+                    </div>
+                </div>
+
+                <div class="ticket-row">
+                    <div class="ticket-icon icon-blue"><i class="fas fa-chair"></i></div>
+                    <div class="ticket-info">
+                        <h4>Premium - Class B</h4>
+                        <p>Long side tribunes</p>
+                    </div>
+                    <div class="price-box">
+                        <span class="price">20€</span>
+                        <button class="btn-buy" onclick="addToCart('Premium Ticket', 'Ticket', 20.00)">BUY</button>
+                    </div>
+                </div>
+
+                <div class="ticket-row">
+                    <div class="ticket-icon icon-grey"><i class="fas fa-chair"></i></div>
+                    <div class="ticket-info">
+                        <h4>Standard - Class C</h4>
+                        <p>Corner & Upper sections</p>
+                    </div>
+                    <div class="price-box">
+                        <span class="price">15€</span>
+                        <button class="btn-buy" onclick="addToCart('Standard Ticket', 'Ticket', 15.00)">BUY</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <span onclick="toggleCart()" style="float:right; cursor:pointer; font-size:20px;">&times;</span>
+            
+            <h2>Your Cart</h2>
+            
+            <div id="cartItemsList">
+                </div>
+            
+            <div class="cart-total">Total: €<span id="cartTotal">0.00</span></div>
+            
+            <button class="btn-checkout" onclick="checkout()">CHECKOUT & PAY</button>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/tickets.js"></script>
+</body>
+</html>

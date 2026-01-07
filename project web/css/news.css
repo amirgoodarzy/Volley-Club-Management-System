@@ -1,0 +1,142 @@
+.news-container {
+    max-width: 900px;
+    padding-bottom: 80px;
+}
+
+
+.news-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex; 
+    margin-bottom: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #eee;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+
+.news-image {
+    width: 35%; 
+    min-height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.news-card:hover .news-image img {
+    transform: scale(1.1); 
+}
+
+.news-content {
+    width: 65%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.news-meta {
+    font-size: 13px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.category {
+    color: #1a6413; 
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+
+.date {
+    color: #999;
+}
+
+
+.news-content h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    color: #151922;
+}
+
+.news-content p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.read-more {
+    font-weight: 700;
+    color: #c5a059;
+    text-transform: uppercase;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.read-more:hover {
+    color: #151922;
+    gap: 12px; /* Arrow moves slightly */
+}
+
+/* Pagination Buttons */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.page-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+    transition: 0.3s;
+}
+
+.page-btn.active, .page-btn:hover {
+    background: #1a6413;
+    color: white;
+    border-color: #1a6413;
+}
+
+
+@media (max-width: 768px) {
+    .news-card {
+        flex-direction: column; 
+    }
+    .news-image {
+        width: 100%;
+        height: 200px;
+    }
+    .news-content {
+        width: 100%;
+        padding: 20px;
+    }
+    .news-content h3 { font-size: 20px; }
+}

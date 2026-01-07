@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Volley Club</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="login-container">
+        <form id="registerForm" class="login-form">
+            <h2>CREATE <span class="gold-text">ACCOUNT</span></h2>
+            
+            <div class="form-group">
+                <label>Choose Username</label>
+                <input type="text" id="rName" required>
+            </div>
+            <div class="form-group">
+                <label>Choose Password</label>
+                <input type="password" id="rPass" required>
+            </div>
+            
+            <button type="submit" class="btn-login">REGISTER</button>
+            <p style="margin-top:15px; color:white;">Already have an account? <a href="login.html" style="color:var(--gold);">Login</a></p>
+            <p id="msg" style="color: var(--gold); display:none;"></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const u = document.getElementById('rName').value;
+            const p = document.getElementById('rPass').value;
+            
+            fetch('api/register.php', {
+                method: 'POST',
+                body: JSON.stringify({ username: u, password: p, role: 'admin' })
+            })
+            .then(res => res.json())
+            .then(data => {
+                const msg = document.getElementById('msg');
+                msg.style.display = 'block';
+                msg.innerText = data.message;
+                if(data.success) {
+                    setTimeout(() => window.location.href = 'login.html', 1500);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

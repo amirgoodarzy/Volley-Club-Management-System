@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage News - Volley Admin</title>
+    
+    <link rel="stylesheet" href="../css/dashboard.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="admin-wrapper">
+        
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>VOLLEY<span class="gold-text">ADMIN</span></h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="manage_roster.html"><i class="fas fa-users"></i> Roster</a></li>
+                <li><a href="manage_matches.html"><i class="fas fa-trophy"></i> Matches</a></li>
+                <li><a href="manage_news.html" class="active"><i class="fas fa-newspaper"></i> News</a></li>
+                <li><a href="manage_shop.html"><i class="fas fa-shopping-bag"></i> Shop</a></li>
+                <li><a href="#" id="logoutBtn" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            
+            <header class="top-header">
+                <div class="page-title">
+                    <h1>Manage News</h1>
+                </div>
+                <div class="user-info">
+                    <span>Welcome, <b>Admin</b></span>
+                </div>
+            </header>
+
+            <div class="content-padding">
+                
+                <div class="action-bar">
+                    <button id="addNewsBtn" class="btn-main">+ Write New Article</button>
+                    <input type="text" placeholder="Search articles..." class="search-input">
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Title</th>
+                                <th>Category</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="newsTableBody">
+                            </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <div id="newsModal" class="modal">
+        <div class="modal-content" style="width: 500px;"> <span class="close-modal">&times;</span>
+            <h2>Write Article</h2>
+            <form id="addNewsForm">
+                
+                <div class="form-group">
+                    <label>Article Title</label>
+                    <input type="text" id="nTitle" required>
+                </div>
+
+                <div class="form-group" style="display:flex; gap:10px;">
+                    <div style="flex:1;">
+                        <label>Category</label>
+                        <select id="nCategory">
+                            <option value="Serie A2">Serie A2</option>
+                            <option value="Market">Market</option>
+                            <option value="Event">Event</option>
+                            <option value="Match Preview">Match Preview</option>
+                        </select>
+                    </div>
+                    <div style="flex:1;">
+                        <label>Date</label>
+                        <input type="date" id="nDate" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Image Filename</label>
+                    <input type="text" id="nImage" placeholder="news1.jpg">
+                </div>
+
+                <div class="form-group">
+                    <label>Content</label>
+                    <textarea id="nContent" rows="5" style="width:100%; padding:10px; border:1px solid #ddd; border-radius:5px;" placeholder="Write your article here..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-save">Publish Article</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/admin_news.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Team - Volley Club</title>
+        
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/roster.css">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logos/logo.png" alt="Team Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="roster.html" class="active">The Team</a></li>
+                <li><a href="matches.html">Matches</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+                <li class="auth-divider">|</li> <li><a href="login.html" class="nav-link-login"><i class="fas fa-user"></i> Login</a></li>
+                <li><a href="register.html" class="btn-join">Join Us</a></li>
+            </ul>
+            <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="header-content">
+            <h1>TEAM <span class="gold-text">ROSTER</span></h1>
+            <p>Season 2025/2026</p>
+        </div>
+    </header>
+
+    <section class="roster-section">
+        <div class="container">
+            
+            <div class="roster-filters">
+                <button class="filter-btn active">All Players</button>
+                <button class="filter-btn">Setters</button>
+                <button class="filter-btn">Hitters</button>
+                <button class="filter-btn">Liberos</button>
+            </div>
+    
+            <div class="roster-grid" id="publicRosterGrid">
+                </div>
+    
+        </div>
+    </section>
+    
+    <script src="js/public_roster.js"></script>
+    <script src="js/main.js"></script>
+    </body>
+    </html>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

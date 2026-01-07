@@ -1,0 +1,95 @@
+.page-header {
+    background-color: #151922; 
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+.header-content h1 { font-size: 48px; font-family: 'Oswald', sans-serif; margin-bottom: 10px; }
+.header-content p { color: #888; letter-spacing: 2px; text-transform: uppercase; }
+
+
+.roster-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: #1a6413; 
+    color: white;
+    border-color: #1a6413;
+}
+
+
+.roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding-bottom: 80px;
+}
+
+
+.player-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.player-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.player-image {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+    background: #e0e0e0;
+}
+
+.player-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top; 
+}
+
+
+.player-number {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #1a6413;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.player-info { padding: 20px; }
+.player-info h3 { font-size: 20px; font-family: 'Oswald', sans-serif; margin-bottom: 5px; text-transform: uppercase; }
+.player-info p { color: #777; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }

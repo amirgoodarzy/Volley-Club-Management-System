@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile - Volley Club</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css"> </head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><img src="assets/logos/logo.png" alt="Logo"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+                <li><a href="#" onclick="logout()" style="color:red;">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="header-content">
+            <h1>WELCOME, <span class="gold-text" id="profileName">USER</span></h1>
+        </div>
+    </header>
+
+    <section class="container" style="padding: 50px 0;">
+        <h2>MY PURCHASE HISTORY</h2>
+        
+        <table class="data-table" style="margin-top: 20px;">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Item</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="historyTable">
+                </tbody>
+        </table>
+    </section>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>

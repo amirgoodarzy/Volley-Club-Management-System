@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Store - Volley Club</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shop.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logos/logo.png" alt="Team Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="roster.html">The Team</a></li>
+                <li><a href="matches.html">Matches</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+                <li class="auth-divider">|</li> <li><a href="login.html" class="nav-link-login"><i class="fas fa-user"></i> Login</a></li>
+                <li><a href="register.html" class="btn-join">Join Us</a></li>
+                <li>
+                    <div class="cart-icon-container" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </div>
+                </li>
+            </ul>
+            <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="header-content">
+            <h1>OFFICIAL <span class="gold-text">STORE</span></h1>
+            <p>Wear the colors of victory</p>
+        </div>
+    </header>
+    
+    <section class="shop-section">
+        <div class="container">
+            
+            <div class="shop-filters">
+                <button class="filter-btn active">All Products</button>
+                <button class="filter-btn">Kits</button>
+                <button class="filter-btn">Clothing</button>
+            </div>
+    
+            <div class="product-grid" id="publicShopGrid">
+                </div>
+    
+        </div>
+    </section>
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <span onclick="toggleCart()" style="float:right; cursor:pointer; font-size:20px;">&times;</span>
+            
+            <h2>Your Cart</h2>
+            
+            <div id="cartItemsList">
+                </div>
+            
+            <div class="cart-total">Total: €<span id="cartTotal">0.00</span></div>
+            
+            <button class="btn-checkout" onclick="checkout()">CHECKOUT & PAY</button>
+        </div>
+    </div>
+    <script src="js/public_shop.js"></script>
+    <script src="js/main.js"></script>
+    </body>
+    </html>

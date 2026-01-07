@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Volley Staff</title>
+    
+    <link rel="stylesheet" href="../css/admin.css"> 
+    <link rel="stylesheet" href="../css/dashboard.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="admin-wrapper">
+        
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>VOLLEY<span class="gold-text">STAFF</span></h2>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="manage_roster.html"><i class="fas fa-users"></i> Roster</a></li>
+                <li><a href="manage_matches.html"><i class="fas fa-trophy"></i> Matches</a></li>
+                <li><a href="manage_news.html"><i class="fas fa-newspaper"></i> News</a></li>
+                <li><a href="manage_shop.html"><i class="fas fa-shopping-bag"></i> Shop</a></li>
+                <li><a href="#" id="logoutBtn" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            
+            <header class="top-header">
+                <div class="page-title">
+                    <h1>Dashboard Overview</h1>
+                </div>
+                <div class="user-info">
+                    <span id="welcomename"><b></b></span>
+                    <div class="user-avatar"><i class="fas fa-user"></i></div>
+                </div>
+            </header>
+
+            <div class="dashboard-grid">
+                <div class="stat-card">
+                    <div class="stat-icon icon-blue"><i class="fas fa-users"></i></div>
+                    <div class="stat-info">
+                        <h3>14</h3>
+                        <p>Total Players</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon icon-gold"><i class="fas fa-calendar-check"></i></div>
+                    <div class="stat-info">
+                        <h3>Next Match</h3>
+                        <p>vs Trentino (Dec 28)</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon icon-green"><i class="fas fa-newspaper"></i></div>
+                    <div class="stat-info">
+                        <h3>3</h3>
+                        <p>News Articles</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon icon-red"><i class="fas fa-shopping-cart"></i></div>
+                    <div class="stat-info">
+                        <h3>12</h3>
+                        <p>New Orders</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-section">
+                <h2>Quick Actions</h2>
+                <div class="action-buttons">
+                    <a href="manage_roster.html" class="btn-action">+ Add Player</a>
+                    <a href="manage_matches.html" class="btn-action">+ Add Match Result</a>
+                    <a href="manage_news.html" class="btn-action">+ Write News</a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
